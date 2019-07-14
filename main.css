@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #fff;
+}
+
+.box{
+    width: 800px;   
+
+    height: 280px;
+    /* margin: 50px auto; */
+    margin: 120px 0 230px  230px;
+}
+
+.box .link{
+    width: 205px;
+    height: 280px;
+    margin: 0 20px;
+    float: left;
+}
+@media screen and (max-width:640px){
+    .box .link{
+        width: 205px;
+        height: 280px;
+        margin: 0 20px;
+
+        float: none;
+    }
+}
+/* span内联元素 不具备宽高属性 设置display  */
+.link .icon{
+    display: inline-block;
+    width: 100%;
+    height: 190px;
+    transition: 0.2s linear; /* 渐变 */
+    -webkit-transition: 0.2s linear;
+}
+
+.link-miss .icon{
+    background:  url("image/blog.png") no-repeat center center;
+}
+.link-play .icon{
+    background: url("image/github.png") no-repeat center center;
+}
+.link-touch .icon{
+    background: url("image/more.png") no-repeat center center;
+}
+
+/* rotate()旋转  scale缩放 */
+.link .icon:hover{
+    transform: rotate(360deg) scale(1.2);
+    -ms-transform: rotate(360deg) scale(1.2); /* IE */
+    -webkit-transform: rotate(360deg) scale(1.2);
+    -o-transform: rotate(360deg) scale(1.2);
+    -moz-transform: rotate(360deg) scale(1.2);
+}
+
+.button {
+    display: block;
+    width: 180px;
+    height: 50px;
+    text-decoration: none;
+    line-height: 50px;
+    color: #2DCB70;
+    font-family: "微软雅黑",Arial, Helvetica,sans-serif;
+    font-weight: bolder;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    padding-left: 60px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: url("image/allow.png") 150px center;
+    position: relative;
+    transition: 0.4s ease;
+}
+
+.button:hover{
+    border: 2px solid rgba(255, 255, 255, 1);
+    background-position: 200px center;
+}
+
+.button .line{
+    display: block;
+    position: absolute;
+    background: none;
+    transition: 0.4s ease;
+}
+
+.button:hover .line{
+    background: aquamarine;
+}
+
+.button .line-top{
+    height: 2px;
+    width: 0px;
+    left: -110%;
+    top: -2px;
+}
+
+.button:hover .line-top{
+    width: 100%;
+    left: -2px;
+}
+
+.button .line-bottom{
+    width: 0px;
+    height: 2px;
+    right: -110px;
+    bottom: -2px;
+}
+
+.button:hover .line-bottom{
+    width: 100%;
+    right: -2px;
+}
+
+.button .line-left{
+    width: 2px;
+    height: 0px;
+    left: -2px;
+    bottom: -110%;
+}
+
+.button:hover .line-left{
+    height: 100%;
+    bottom: -2px;
+}
+
+.button .line-right{
+    width: 2px;
+    height: 0px;
+    right: -2px;
+    top: -110%;
+}
+
+.button:hover .line-right{
+    height: 100%;
+    top: -2px;
+}
